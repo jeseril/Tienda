@@ -97,6 +97,7 @@ nav {
     right: -3px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .desktop-menu{
@@ -190,7 +191,8 @@ nav {
 .mobile-menu{
     position: absolute;
     top: 58.8px;
-    padding: 24px; 
+    padding: 24px;
+    background-color: var(--white);
 }
 
 .mobile-menu a{
@@ -226,7 +228,102 @@ nav {
     font-size: var(--sm);
 }
 
+/* shoping cart */
 
+.add-to-cart-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-detail{
+    width: 360px;
+    padding: 24px;
+    position: absolute;
+    right: 0;
+    background-color: var(--white);
+
+}
+.title-container{
+    display: flex;
+    margin-bottom: 24px;
+
+}
+.title-container img{
+    transform: rotate(180deg);
+    margin-right: 24px;          
+}
+
+.primary-button{
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight:700;
+}
+
+.order p:nth-child(1){
+    display: flex;
+    flex-direction: column;
+}
+
+.order p span:nth-child(1){
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+.order p:nth-child(2){
+    text-align: end;
+    font-weight: bold;
+}
+.title{
+    font-size: var(--lg);
+    font-weight: bold;
+}
+.order{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: var(--text-input-field);
+    margin-bottom: 24px;
+    border-radius: 8px;
+    padding: 0 24px;
+}
+
+.shopping-card {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.shopping-card figure{
+    margin:0 ;
+}
+
+.shopping-card figure img{
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+
+}
+
+
+.shopping-card p:nth-child(2){
+    color: var(--very-light-pink);
+}
+
+.shopping-card p:nth-child(3){
+    font-size: var(--md);
+    font-weight: bold;    
+    }
 
 
 /* media-query */
@@ -239,7 +336,10 @@ nav {
     .desktop-menu{
         display: none;
     }
-
+    
+    .product-detail{
+        width: 100%;
+    }
 }
 
 @media (min-width: 641px) {
